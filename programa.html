@@ -2,7 +2,46 @@
 
 <script>
 
-document.write("A idade doflávio é <br>");
-document.write(18+20);
+	function pulalinha() {
+	 
+		document.write("<br>");
+		document.write("<br>");
+	}
 
-</script>  
+	function mostra(frase) {
+		
+		document.write(frase);
+		pulalinha();
+	}	
+
+	function calculaImc(altura, peso) {
+
+		var imc = peso / (altura * altura);
+		mostra("O imc calculado é " + imc);
+	}
+	
+	calculaImc(1.71, 73);
+	calculaImc(1.72, 68);
+	
+	if(imc < 18.5) {
+
+    mostra("Você está abaixo do recomendado");
+
+}
+
+if(imc > 35) {
+
+    mostra("Você está acima do recomendado");
+}
+
+if(imc >= 18.5) {
+
+    if(imc <= 35) {
+
+        mostra("Seu IMC está excelente!");
+
+    }
+
+}
+	
+	mostra();  
